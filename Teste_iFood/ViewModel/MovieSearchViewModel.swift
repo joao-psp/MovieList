@@ -30,7 +30,11 @@ class MovieSearchViewModel {
 
     func reloadSearch() {
         service.fetchMovieSearch(query: searchQuery) { result in
-            self.movieList = result
+            self.movieList = result.map { item -> MovieSearchModel in
+                var x = item
+                x.posterPath = "https://image.tmdb.org/t/p/original\(item.posterPath ?? "")"
+                return x
+            }
             self.delegate?.onSuccess()
         } onFailure: { error in
             print(error)
