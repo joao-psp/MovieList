@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Teste_iFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPR-3W-ovs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Digite o nome do filme" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-mO-esu">
+                                <rect key="frame" x="10" y="54" width="394" height="51"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-C6-w2u">
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="f2F-X2-zGG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Ja-Vz-swQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Wb-C6-w2u" firstAttribute="leading" secondItem="7Ja-Vz-swQ" secondAttribute="leading" id="5k6-3Y-AFy"/>
+                            <constraint firstItem="XqI-mO-esu" firstAttribute="trailing" secondItem="7Ja-Vz-swQ" secondAttribute="trailing" constant="-10" id="9fK-F9-p6g"/>
+                            <constraint firstItem="7Ja-Vz-swQ" firstAttribute="bottom" secondItem="4Wb-C6-w2u" secondAttribute="bottom" id="JTZ-Va-TLx"/>
+                            <constraint firstItem="7Ja-Vz-swQ" firstAttribute="trailing" secondItem="4Wb-C6-w2u" secondAttribute="trailing" id="REm-hT-Gv1"/>
+                            <constraint firstItem="4Wb-C6-w2u" firstAttribute="top" secondItem="XqI-mO-esu" secondAttribute="bottom" constant="10" id="Sno-CU-d83"/>
+                            <constraint firstItem="XqI-mO-esu" firstAttribute="leading" secondItem="7Ja-Vz-swQ" secondAttribute="leading" constant="10" id="hzh-SZ-3qF"/>
+                            <constraint firstItem="XqI-mO-esu" firstAttribute="top" secondItem="7Ja-Vz-swQ" secondAttribute="top" constant="10" id="vA4-NZ-UFa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4Wb-C6-w2u" id="IJl-S4-peG"/>
+                        <outlet property="searchBar" destination="XqI-mO-esu" id="hr7-qE-e7h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
